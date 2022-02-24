@@ -11,6 +11,7 @@ export class People {
   diaChi = '';
   thongTinDiChuyen = '';
   thuocDoiTuong = '';
+  maDoiTuong = 0;
 
   constructor() {}
 }

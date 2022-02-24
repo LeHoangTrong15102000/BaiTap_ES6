@@ -1,3 +1,11 @@
+// import các file folder model vào
+// import { People } from '../models/People';
+// import { TableInfo } from '../models/TableInfo';
+
+
+// let people = new People();
+// let tableInfo = new TableInfo();
+
 (function($) {
 
 
@@ -117,3 +125,6 @@
         });
     }
 })(jQuery);
+
+// Viết code xử lý bài tập ở phần main.js
+// Xử lý nút sự kiện click bên trong file main luôn
