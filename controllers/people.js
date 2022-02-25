@@ -1,7 +1,7 @@
 // Xử lý cho việc người dân nhập vào từ input , select
 
-import { People } from '../models/People';
-import { TableInfo } from '../models/TableInfo';
+import { People } from '../models/People.js';
+import { TableInfo } from '../models/TableInfo.js';
 
 // tạo đối tượng CD
 let tableInfo = new TableInfo();
@@ -10,7 +10,7 @@ let tableInfo = new TableInfo();
 tableInfo.getThongTin();
 
 // Xây dựng hàm khi nhấn vào nút click
-export const funcInfo = () => {
+export function funcInfo() {
   // tạo đối tượng công dân
   let people = new People();
 
@@ -39,7 +39,7 @@ export const funcInfo = () => {
   tableInfo.addPeople(people);
 
   // Lưu lại trên localStorage() sau khi đã thêm thông tin và thiển thị nó lên table
-  tableInfo.saveInfo()
-  
-  console.log(tableInfo)
-};
+  tableInfo.saveThongTin();
+
+  console.log(tableInfo);
+}

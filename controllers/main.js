@@ -2,7 +2,7 @@
 // import { People } from '../models/People.js';
 // import { TableInfo } from '../models/TableInfo.js';
 
-// import { funcInfo } from './people.js';
+import { funcInfo } from './people.js';
 
 // let people = new People();
 // let tableInfo = new TableInfo();
@@ -21,7 +21,6 @@ class People {
 
   constructor() {}
 }
-
 
 (function ($) {
   var form = $('#signup-form');
