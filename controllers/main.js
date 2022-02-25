@@ -1,10 +1,10 @@
 // import các file folder model vào
-import { People } from '../models/People.js';
-import { TableInfo } from '../models/TableInfo.js';
-import { funcInfo } from './people.js';
+// import { People } from '../models/People.js';
+// import { TableInfo } from '../models/TableInfo.js';
+// import { funcInfo } from './people.js';
 
-let people = new People();
-let tableInfo = new TableInfo();
+// let people = new People();
+// let tableInfo = new TableInfo();
 
 (function ($) {
   var form = $('#signup-form');
@@ -145,6 +145,3 @@ let tableInfo = new TableInfo();
     });
   }
 })(jQuery);
-
-// Viết code xử lý bài tập ở phần main.js
-// Xử lý nút sự kiện click bên trong file main luôn

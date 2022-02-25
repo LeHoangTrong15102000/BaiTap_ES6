@@ -3,12 +3,14 @@
 // Xây dựng các thuộc tính đối tượng để thêm CD vào bảng lưu trên localStorage
 
 export class TableInfo {
-    mangThongTinCD = []// ban đầu cho là mảng rỗng
+  mangThongTinCD = []; // ban đầu cho là mảng rỗng
 
-    constructors() {
+  constructors() {}
 
-    }
+  // Xây dựng phương thức thêm công dân
+  addPeople = () => {};
 
-    // Xây dựng phương thức thêm công dân
-    addPeople = () => {}
+  // Chỉnh sửa thông tin người dân
+
+  // Xóa thông tin người dân
 }
