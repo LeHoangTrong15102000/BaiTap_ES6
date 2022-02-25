@@ -2,13 +2,11 @@
 // import { People } from '../models/People.js';
 // import { TableInfo } from '../models/TableInfo.js';
 
-// import { funcInfo } from './people.js';
-import { People } from '../models/People.js'
-
+import { funcInfo } from './people.js';
+// import { People } from '../models/People.js'
 
 // let people = new People();
 // let tableInfo = new TableInfo();
-
 
 (function ($) {
   var form = $('#signup-form');
@@ -84,8 +82,8 @@ import { People } from '../models/People.js'
       return form.valid();
     },
     onFinished: function (event, currentIndex) {
-      alert('Submited');
-      // funcInfo();
+      // alert('Submited');
+      funcInfo();
     },
     onStepChanged: function (event, currentIndex, priorIndex) {
       return true;

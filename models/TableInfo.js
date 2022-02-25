@@ -9,67 +9,65 @@ export class TableInfo {
 
   // Xây dựng phương thức thêm công dân
   addPeople = (thongTinMoi) => {
-
-      // Bất kì lệnh nào trong khối try xảy ra lỗi => hủy không chạy tiếp mà sẽ chạy và catch
-      try {
-        this.mangThongTinCD.push(thongTinMoi)
-      } catch(ex) {
-        console.log(ex)
-        return false
-      }
-      return true; // Ngược lại thì return là true
+    // Bất kì lệnh nào trong khối try xảy ra lỗi => hủy không chạy tiếp mà sẽ chạy và catch
+    try {
+      this.mangThongTinCD.push(thongTinMoi);
+    } catch (ex) {
+      console.log(ex);
+      return false;
+    }
+    return true; // Ngược lại thì return là true
   };
-
 
   // Xóa thông tin người dân
   deletePeople = (soDienThoaiClick) => {
-    let index = this.mangThongTinCD.findIndex(thongTin => thongTin.soDienThoai === soDienThoaiClick) 
+    let index = this.mangThongTinCD.findIndex(
+      (thongTin) => thongTin.soDienThoai === soDienThoaiClick
+    );
 
     if (index !== -1) {
-      this.mangThongTinCD.splice(index, 1)
+      this.mangThongTinCD.splice(index, 1);
 
       return true;
     }
-    
 
     return false;
-  }
-
+  };
 
   // Lấy thông tin người dân truyền cung cấp qua form
   layThongTinNguoiDan = (soDienThoaiClick) => {
-    let thongTin = this.mangThongTinCD.find(thongTin => thongTin.soDienThoai === soDienThoaiClick)
+    let thongTin = this.mangThongTinCD.find(
+      (thongTin) => thongTin.soDienThoai === soDienThoaiClick
+    );
 
     // Nếu thông tin đó tồn tại thì trả về thông tin đó
     if (thongTin) {
-      return thongTin
+      return thongTin;
     }
 
-    return undefined // Không thì trả về là undefined
-  }
+    return undefined; // Không thì trả về là undefined
+  };
 
   // Cập nhât thông tin người dân
   capNhatThongTin = (soDienThoai, thongTinUpdate) => {
-    let thongTin = this.layThongTinNguoiDan(soDienThoai)
+    let thongTin = this.layThongTinNguoiDan(soDienThoai);
 
     if (thongTin) {
       // nếu tồn tại thông tin đó
 
-      // Duyệt qua từng key của object thông tin 
+      // Duyệt qua từng key của object thông tin
       for (let tenThuocTinh in thongTin) {
         // Mỗi lần duyệt qua gán giá trị mới của thông tin vừa sửa đổi cho giá trị thông tin cũ
         thongTin[tenThuocTinh] = thongTinUpdate[tenThuocTinh];
       }
     }
-  }
-
-
+  };
 
   // Luu LocalStorage
   saveThongTin = () => {
     let sInfo = JSON.stringify(this.mangThongTinCD);
     localStorage.setItem('thongTin', sInfo);
-  }
+  };
 
   // Lay du lieu tu LOcalStorage
   getThongTin = () => {
@@ -77,5 +75,9 @@ export class TableInfo {
     if (localStorage.getItem('thongTin'));
 
     // Lấy dữ liệu từ localStorage gans vao mảng thông tin của đối tượng
-  }
+    this.mangThongTinCD = JSON.parse(localStorage.getItem('thongTin')); // Biến chuỗi menu trong JSON thành lại object
+
+    // // sau đó render ra giao diện
+    // renderTableMonAn(menu.mangMonAn); // Hàm render giao diện món ăn sẽ viết riêng ra
+  };
 }
