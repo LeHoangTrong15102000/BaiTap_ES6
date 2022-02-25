@@ -7,7 +7,7 @@ import { TableInfo } from '../models/TableInfo';
 let tableInfo = new TableInfo();
 
 // Lấy thông tin từ TableInfo
-tableInfo.getInfo();
+tableInfo.getThongTin();
 
 // Xây dựng hàm khi nhấn vào nút click
 export const funcInfo = () => {
@@ -38,5 +38,8 @@ export const funcInfo = () => {
   // Sau khi đã lấy hết tất cả các thông tin người dân thì gọi hàm thêm thông tin vào danh sách thông tin
   tableInfo.addPeople(people);
 
-  //
+  // Lưu lại trên localStorage() sau khi đã thêm thông tin và thiển thị nó lên table
+  tableInfo.saveInfo()
+  
+  console.log(tableInfo)
 };
