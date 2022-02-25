@@ -10,7 +10,7 @@ export class People {
   namSinh = 0;
   diaChi = '';
   thongTinDiChuyen = '';
-  thuocDoiTuong = '';
+  loaiDoiTuong = '';
   maDoiTuong = 0;
 
   constructor() {}
