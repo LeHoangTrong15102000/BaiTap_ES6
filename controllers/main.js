@@ -2,25 +2,13 @@
 // import { People } from '../models/People.js';
 // import { TableInfo } from '../models/TableInfo.js';
 
-import { funcInfo } from './people.js';
+// import { funcInfo } from './people.js';
+import { People } from '../models/People.js'
+
 
 // let people = new People();
 // let tableInfo = new TableInfo();
-class People {
-  tenCD = '';
-  hoCD = '';
-  email = '';
-  soDienThoai = 0;
-  ngaySinh = 0;
-  thangSinh = 0;
-  namSinh = 0;
-  diaChi = '';
-  thongTinDiChuyen = '';
-  loaiDoiTuong = '';
-  maDoiTuong = 0;
 
-  constructor() {}
-}
 
 (function ($) {
   var form = $('#signup-form');
